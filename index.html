@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+        h2 {
+            margin-top: 10px;
+            color: orange;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .main {
+            display: flex;
+            margin-left: 100px;
+        }
+
+        .box1 {
+            margin-top: 20px;
+            margin-left: 30px;
+            height: 500px;
+            width: 400px;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+
+        .box2 {
+            margin-top: 20px;
+            margin-left: 30px;
+            height: 500px;
+            width: 400px;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+
+        .box3 {
+            margin-top: 20px;
+            margin-left: 30px;
+            height: 500px;
+            width: 400px;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+
+        .box4 {
+            margin-top: 20px;
+            margin-left: 30px;
+            height: 500px;
+            width: 400px;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+
+        .box5 {
+            margin-top: 20px;
+            margin-left: 30px;
+            height: 500px;
+            width: 400px;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+
+        .box6 {
+            margin-top: 20px;
+            margin-left: 30px;
+            height: 500px;
+            width: 400px;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+
+        #img1 {
+            height: 400px;
+            width: 398px;
+            border-radius: 20px;
+        }
+
+        #img2 {
+            height: 400px;
+            width: 380px;
+            border-radius: 20px;
+        }
+
+        #img3 {
+            height: 400px;
+            width: 398px;
+            border-radius: 20px;
+        }
+
+        #img4 {
+            height: 400px;
+            width: 398px;
+            border-radius: 20px;
+        }
+
+        #img5 {
+            height: 400px;
+            width: 398px;
+            border-radius: 20px;
+        }
+
+        #img6 {
+            height: 400px;
+            width: 398px;
+            border-radius: 20px;
+        }
+
+        h3 {
+            margin-left: 10px;
+        }
+
+        h5 {
+            margin-left: 10px;
+        }
+
+        input {
+            font-size: 20px;
+            background-color: orange;
+            border-radius: 20px;
+            margin-left: 80px;
+            width: 200px;
+        }
+        /* footer{
+            margin-top: 40px;
+            margin-left:20px ;
+        } */
+         
+    </style>
+</head>
+
+<body>
+    <!-- creating new header file and link with index using jquery  -->
+    <div id="header"></div>
+    <!-- Main content -->
+    <h2>Step Into Style</h2>
+    <p>Discover our latest collection of premium sneakers <br>— comfort, design, and performance in every pair.</p>
+    <div class="main">
+        <div class="box1">
+            <img src="images/img1.avif" id="img1">
+            <h3>AirFlex Runner</h3>
+            <h5>$89.00</h5>
+            <input type="submit" value="Add to Cart">
+        </div>
+        <div class="box2">
+            <img src="images/img2.avif" id="img2">
+            <h3>Urban Street Pro</h3>
+            <h5>$99.00</h5>
+            <input type="submit" value="Add to Cart">
+        </div>
+        <div class="box3">
+            <img src="images/img3.avif" id="img3">
+            <h3>Urban Street Pro</h3>
+            <h5>$79.00</h5>
+            <input type="submit" value="Add to Cart">
+        </div>
+    </div>
+    <div class="main">
+        <div class="box4">
+            <img src="images/img4.avif" id="img4">
+            <h3>Volt Edge</h3>
+            <h5>$199.00</h5>
+            <input type="submit" value="Add to Cart">
+        </div>
+        <div class="box5">
+            <img src="images/img5.avif" id="img5">
+            <h3>Zenith Flow</h3>
+            <h5>$129.00</h5>
+            <input type="submit" value="Add to Cart">
+        </div>
+        <div class="box6">
+            <img src="images/img6.avif" id="img6">
+            <h3>Street Vibe Low</h3>
+            <h5>$69.00</h5>
+            <input type="submit" value="Add to Cart">
+        </div>
+    </div>
+    <br><hr>
+    <!-- <footer class="mainfooter">
+        <div class="footer1">
+            <h3>BLOOM<span>SHOP</span></h3>
+            <h5>Discover unique products that inspire your <br>lifestyle. Quality craftsmanship meets modern <br>design.</h5>
+            
+        </div>
+    </footer> -->
+      <div id="footer"></div>
+     <script>
+    $(document).ready(function () {
+      $("#header").load("header.html");
+    });
+  </script>
+    <script>
+    $(document).ready(function () {
+      $("#footer").load("footer.html");
+    });
+  </script>
+
+
+</body>
+
+</html>

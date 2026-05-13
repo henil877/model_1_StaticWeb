@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h2{
+            position: relative;
+            bottom: 40px;
+            font-size: 40px;
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: lightgray;
+            height: 500px;
+            width: 400px;
+            border-radius: 20px;
+            border: 2px solid black;
+            box-shadow: 0px 0px 20px;
+        }
+        .label{
+            position: relative;
+            right: 70px;
+            font-size: 20px;
+        }
+        input{
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        .btn{
+            width: 100px;
+            background-color: orange;
+        }
+        #Register{
+            position: relative;
+            top: 20px;
+            left: 130px;
+            font-size: 20px;
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h2>Register</h2>
+            <label class="label">Username</label>
+            <input type="text" required autofocus>
+            <br><br>
+            <label class="label">Password </label>
+            <input type="password" required>
+            <br><br>
+            <label class="label">Email </label>
+            <input type="email" required>
+            <br><br>
+            <input type="submit" value="Register" class="btn">
+            <a href="Login.html" id="Register">Login</a>
+        </form>
+    </div>
+</body>
+</html>
