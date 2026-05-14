@@ -1,12 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categories</title>
     <link rel="stylesheet" href="category.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
+
 <body>
-    
+    <div id="header">
+        <header>
+            <h3 id="shop">BLOOM<span>SHOP</span></h3>
+            <nav>
+                <a href="index.html" id="navheader">Home</a>
+                <a href="#men" id="navheader">Men</a>
+                <a href="#women" id="navheader">Women</a>
+                <a href="#accessories" id="navheader">Accessories</a>
+            </nav>
+        </header>
+        <div id="men">
+            <h1>Men's Sneakers</h1>
+            <div class="grid">
+
+                <!-- Card 1 -->
+
+                <div class="card">
+                    <div class="img-wrap">
+                        <img src="images/menimg1.webp" alt="Men Navy Blue Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">Gabicci</span>
+                        <p class="product-name">Men Navy Blue Sneakers</p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 1,980.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 4,950.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <!-- <span class="sold-out-badge">Sold out</span> -->
+                    <div class="img-wrap">
+                        <img src="images/menimg2.webp" alt="Men Coffee Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">Gabicci</span>
+                        <p class="product-name">Men Coffee Sneakers</p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 1,980.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 4,950.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <!-- <span class="sold-out-badge">Sold out</span> -->
+                    <div class="img-wrap">
+                        <img src="images/menimg3.webp" alt="Men Black Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">Cobblerz</span>
+                        <p class="product-name">Men Black Sneakers</p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 2,000.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 4,999.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card">
+                    <div class="img-wrap">
+                        <img src="images/menimg4.webp" alt="Men White Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">Cobblerz</span>
+                        <p class="product-name">Men White Sneakers</p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 2,000.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 4,999.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card">
+                    <div class="img-wrap">
+                        <img src="images/menimg5.webp" alt="Men White Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">Toni Rossi</span>
+                        <p class="product-name">Men Beige Solid Sneakers</p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 1,878.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 4,695.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card">
+                    <div class="img-wrap">
+                        <img src="images/menimg6.webp" alt="Men White Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">Toni Rossi</span>
+                        <p class="product-name">Men Cofree Solid Sneakers</p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 1,878.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 4,695.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="card">
+                    <div class="img-wrap">
+                        <img src="images/menimg7.webp" alt="Men White Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">Toni Rossi</span>
+                        <p class="product-name">Men Cofree Solid Sneakers</p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 1,878.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 4,695.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="card">
+                    <div class="img-wrap">
+                        <img src="images/menimg8.webp" alt="Men White Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">Toni Rossi</span>
+                        <p class="product-name">Men Cofree Solid Sneakers</p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 1,878.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 4,695.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><hr>
+        <div id="women">
+            <h1>Women's Sneakers</h1>
+            <div class="grid">
+
+                <!-- Card 1 -->
+
+                <div class="card">
+                    <div class="img-wrap">
+                        <img src="images/womenimg1.webp" alt="Men Navy Blue Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">Jove</span>
+                        <p class="product-name">Women Camel Solid Sneakers</p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 1,649.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 3,299.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <!-- <span class="sold-out-badge">Sold out</span> -->
+                    <div class="img-wrap">
+                        <img src="images/womenimg2.webp" alt="Men Coffee Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">Jove</span>
+                        <p class="product-name">Women Beige Perforated Sneakers</p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 1,649.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 3,299.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <!-- <span class="sold-out-badge">Sold out</span> -->
+                    <div class="img-wrap">
+                        <img src="images/womenimg3.webp" alt="Men Black Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">Jove</span>
+                        <p class="product-name">Women Nude Solid Embellished Sandals</p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 2,079.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 2,599.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card">
+                    <div class="img-wrap">
+                        <img src="images/womenimg4.webp" alt="Men White Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">Jove</span>
+                        <p class="product-name">Women Beige Solid Ruched Sandals</p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 999.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 1,999.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card">
+                    <div class="img-wrap">
+                        <img src="images/womenimg5.webp" alt="Men White Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">Jove</span>
+                        <p class="product-name">Women Peach Solid One Toe Flats</p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 749.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 1,499.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card">
+                    <div class="img-wrap">
+                        <img src="images/womenimg6.webp" alt="Men White Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">Jove</span>
+                        <p class="product-name">Women Multi Pink Embellished Mojaris</p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 1,499.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 2,999.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="card">
+                    <div class="img-wrap">
+                        <img src="images/womenimg7.webp" alt="Men White Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">Jove</span>
+                        <p class="product-name">Women White & Fushia Embroidered Sneakers</p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 1,599.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 3,199.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="card">
+                    <div class="img-wrap">
+                        <img src="images/womenimg8.webp" alt="Men White Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">jove</span>
+                        <p class="product-name">Women Pink Western Embellished Pumps</p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 1,899.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 3,799.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><hr>
+        <div id="accessories">
+            <h1>Other Accessories</h1>
+            <div class="grid">
+
+                <!-- Card 1 -->
+
+                <div class="card">
+                    <div class="img-wrap">
+                        <img src="images/accessoriesimg1.webp" alt="Men Navy Blue Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">Rigzy</span>
+                        <p class="product-name">Solid Sports/Regular Cap</p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 157.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 899.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <!-- <span class="sold-out-badge">Sold out</span> -->
+                    <div class="img-wrap">
+                        <img src="images/accessoriesimg2.webp" alt="Men Coffee Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">Wild Stone</span>
+                        <p class="product-name"> Edge Perfume Eau de Parfum Eau de Parfum</p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 198.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 425.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <!-- <span class="sold-out-badge">Sold out</span> -->
+                    <div class="img-wrap">
+                        <img src="images/accessoriesimg3.webp" alt="Men Black Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">DEYVUE</span>
+                        <p class="product-name">Riding Glasses Oval Sunglasses</p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 148.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 1,159.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card">
+                    <div class="img-wrap">
+                        <img src="images/accessoriesimg4.webp" alt="Men White Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">povty </span>
+                        <p class="product-name">New Year 2022 Bestseller Expensive Black A Brand Heavy Quality Material For Boyz Analog Watch</p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 999.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 1,999.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card">
+                    <div class="img-wrap">
+                        <img src="images/accessoriesimg5.webp" alt="Men White Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">ILLARION</span>
+                        <p class="product-name">Sports/Regular Cap</p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 180.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 999.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card">
+                    <div class="img-wrap">
+                        <img src="images/accessoriesimg6.webp" alt="Men White Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">Eco Vibes</span>
+                        <p class="product-name">Women Black, White Tote</p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 250.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 799.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="card">
+                    <div class="img-wrap">
+                        <img src="images/accessoriesimg7.webp" alt="Men White Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">Netwiz  </span>
+                        <p class="product-name"> UV Protection Wayfarer Sunglasses </p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 120.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 674.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="card">
+                    <div class="img-wrap">
+                        <img src="images/accessoriesimg8.webp" alt="Men White Sneakers" />
+                    </div>
+                    <div class="info">
+                        <span class="brand-tag">PROVOGUE</span>
+                        <p class="product-name"> All Purple Series Analog Watch </p>
+                        <div class="pricing">
+                            <span class="sale-price">Rs. 204.00</span>
+                            <span class="mrp-label">MRP</span>
+                            <span class="mrp-price">Rs. 1,499.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><hr>
+    <div id="footer"></div>
+     <script>
+    $(document).ready(function () {
+      $("#footer").load("footer.html");
+    });
+  </script>
 </body>
+
 </html>

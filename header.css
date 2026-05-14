@@ -2,7 +2,6 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: cursive;
         }
         header{
             display: flex;
@@ -18,9 +17,13 @@
         }
         #shop{
             position: relative;
-            right: 60%;
+            right: 45%;
         }    
         span{
             color: orange;
         }
+
+
+
+        
        
