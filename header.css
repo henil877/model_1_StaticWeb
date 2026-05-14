@@ -1,0 +1,26 @@
+ *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+        header{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            height: 60px;
+            background-color: lightgray;
+        }
+        #navheader{
+            padding-right: 40px;
+            text-decoration: none;
+            color: black;
+        }
+        #shop{
+            position: relative;
+            right: 60%;
+        }    
+        span{
+            color: orange;
+        }
+       
