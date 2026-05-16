@@ -5,23 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="Register.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <form>
+    <div id="header"></div>
+    <div class="register">
+        <form id="registerForm">
             <h2>Register</h2>
+
+            <label class="label">Full Name</label>
+            <input type="text" id="fullname" required autofocus placeholder="Your full name">
+            <br><br>
+
             <label class="label">Username</label>
-            <input type="text" required autofocus>
+            <input type="text" id="username" required placeholder="Choose username">
             <br><br>
-            <label class="label">Password </label>
-            <input type="password" required>
+
+            <label class="label">Password</label>
+            <input type="password" id="password" required placeholder="Choose password">
             <br><br>
-            <label class="label">Email </label>
-            <input type="email" required>
+
+            <label class="label">Email</label>
+            <input type="email" id="email" required placeholder="Your email">
             <br><br>
+
+            <label class="label">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Your phone number">
+            <br><br>
+
             <input type="submit" value="Register" class="btn">
             <a href="Login.html" id="Register">Login</a>
         </form>
     </div>
+    <script>
+        $(document).ready(function () {
+            $("#header").load("header.html");
+
+            // If already logged in, go home
+            if (localStorage.getItem("loggedInUser")) {
+                window.location.href = "index.html";
+            }
+
+            $("#registerForm").submit(function (event) {
+                event.preventDefault();
+
+                var userData = {
+                    fullname: $("#fullname").val().trim(),
+                    username: $("#username").val().trim(),
+                    password: $("#password").val(),
+                    email: $("#email").val().trim(),
+                    phone: $("#phone").val().trim()
+                };
+
+                // Save registered user
+                localStorage.setItem("registeredUser", JSON.stringify(userData));
+
+                // Auto-login: set loggedInUser too
+                localStorage.setItem("loggedInUser", JSON.stringify(userData));
+
+                alert("Registration Successful! Welcome to BloomShop!");
+
+                // Go directly to home page
+                window.location.href = "index.html";
+            });
+        });
+    </script>
 </body>
 </html>
