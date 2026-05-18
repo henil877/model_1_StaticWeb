@@ -14,7 +14,6 @@ h1 {
   margin: 30px 30px 10px 30px;
 }
 
-/* Only scope the continue-shopping link — NOT all <a> tags */
 .continue-btn {
   display: inline-flex;
   align-items: center;
