@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categories</title>
-    <link rel="stylesheet" href="category.css">
+    <link rel="stylesheet" href="css/category.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
@@ -140,6 +140,9 @@
             </div>
         </div>
     </div>
+    <div class="loadmorebutton">
+    <button id="loadMoreMen" class="load-btn">Load More</button>
+</div>
     <br>
     <hr>
     <div id="women">
@@ -270,6 +273,9 @@
             </div>
         </div>
     </div>
+    <div class="loadmorebutton">
+    <button id="loadMoreWomen" class="load-btn">Load More</button>
+</div>
     <br>
     <hr>
     <div id="accessories">
@@ -400,6 +406,9 @@
             </div>
         </div>
     </div>
+    <div class="loadmorebutton">
+    <button id="loadMoreAccessories" class="load-btn">Load More</button>
+</div>
     <div class="top">
         <div class="scrollupbox">
             <div class="arrow">
@@ -412,11 +421,46 @@
     <hr>
     <div id="footer"></div>
     <script>
-        $(document).ready(function () {
-            $("#header").load("header.html");
-            $("#footer").load("footer.html");
+    $(document).ready(function () {
+
+        $("#header").load("header.html");
+        $("#footer").load("footer.html");
+
+        $("#men .card").hide();
+        $("#men .card").slice(0, 4).show();
+
+        $("#loadMoreMen").click(function () {
+            $("#men .card:hidden").slice(0, 4).slideDown();
+
+            if ($("#men .card:hidden").length == 0) {
+                $(this).fadeOut();
+            }
         });
-    </script>
+
+        $("#women .card").hide();
+        $("#women .card").slice(0, 4).show();
+
+        $("#loadMoreWomen").click(function () {
+            $("#women .card:hidden").slice(0, 4).slideDown();
+
+            if ($("#women .card:hidden").length == 0) {
+                $(this).fadeOut();
+            }
+        });
+
+        $("#accessories .card").hide();
+        $("#accessories .card").slice(0, 4).show();
+
+        $("#loadMoreAccessories").click(function () {
+            $("#accessories .card:hidden").slice(0, 4).slideDown();
+
+            if ($("#accessories .card:hidden").length == 0) {
+                $(this).fadeOut();
+            }
+        });
+
+    });
+</script>
 
 </body>
 

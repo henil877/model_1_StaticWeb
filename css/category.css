@@ -173,3 +173,24 @@
  a {
    color: black;
  }
+
+ .loadmorebutton{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.load-btn{
+    padding: 12px 35px;
+    border: none;
+    border-radius: 30px;
+    background: orange;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.load-btn:hover{
+    background: #d88a00;
+}

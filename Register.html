@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="Register.css">
+    <link rel="stylesheet" href="css/Register.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
@@ -37,38 +37,78 @@
             <a href="Login.html" id="Register">Login</a>
         </form>
     </div>
-    <script>
-        $(document).ready(function () {
-            $("#header").load("header.html");
+   <script>
+    $(document).ready(function () {
 
-            // If already logged in, go home
-            if (localStorage.getItem("loggedInUser")) {
-                window.location.href = "index.html";
+        $("#header").load("header.html");
+
+        if (localStorage.getItem("loggedInUser")) {
+            window.location.href = "index.html";
+        }
+
+        $("#registerForm").submit(function (event) {
+            event.preventDefault();
+
+            var fullname = $("#fullname").val().trim();
+            var username = $("#username").val().trim();
+            var password = $("#password").val().trim();
+            var email = $("#email").val().trim();
+            var phone = $("#phone").val().trim();
+
+            var namePattern = /^[A-Za-z ]{3,}$/;
+            var usernamePattern = /^[A-Za-z0-9_]{4,}$/;
+            var passwordPattern = /^(?=.*[A-Z])(?=.*[0-9]).{6,}$/;
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var phonePattern = /^[0-9]{10}$/;
+
+            if (!namePattern.test(fullname)) {
+                alert("Full Name must contain only letters and minimum 3 characters");
+                $("#fullname").focus();
+                return;
             }
 
-            $("#registerForm").submit(function (event) {
-                event.preventDefault();
+            if (!usernamePattern.test(username)) {
+                alert("Username must be minimum 4 characters and contain only letters, numbers or underscore");
+                $("#username").focus();
+                return;
+            }
 
-                var userData = {
-                    fullname: $("#fullname").val().trim(),
-                    username: $("#username").val().trim(),
-                    password: $("#password").val(),
-                    email: $("#email").val().trim(),
-                    phone: $("#phone").val().trim()
-                };
+            if (!passwordPattern.test(password)) {
+                alert("Password must contain minimum 6 characters, 1 uppercase letter and 1 number");
+                $("#password").focus();
+                return;
+            }
 
-                // Save registered user
-                localStorage.setItem("registeredUser", JSON.stringify(userData));
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address");
+                $("#email").focus();
+                return;
+            }
 
-                // Auto-login: set loggedInUser too
-                localStorage.setItem("loggedInUser", JSON.stringify(userData));
+            if (phone !== "" && !phonePattern.test(phone)) {
+                alert("Phone number must be exactly 10 digits");
+                $("#phone").focus();
+                return;
+            }
 
-                alert("Registration Successful! Welcome to BloomShop!");
+            var userData = {
+                fullname: fullname,
+                username: username,
+                password: password,
+                email: email,
+                phone: phone
+            };
 
-                // Go directly to home page
-                window.location.href = "index.html";
-            });
+            localStorage.setItem("registeredUser", JSON.stringify(userData));
+
+            localStorage.setItem("loggedInUser", JSON.stringify(userData));
+
+            alert("Registration Successful! Welcome to BloomShop!");
+
+            window.location.href = "index.html";
         });
-    </script>
+
+    });
+</script>
 </body>
 </html>
