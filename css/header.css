@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
 header {
     display: flex;
     flex-direction: row;
@@ -11,6 +18,7 @@ header {
     height: 60px;
     background-color: lightgray;
     padding: 0 20px;
+
 }
 
 /* Logo always left-anchored */

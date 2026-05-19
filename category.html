@@ -22,6 +22,14 @@
             <button class="filter-btn" data-filter="men">Men Products</button>
             <button class="filter-btn" data-filter="women">Women Products</button>
             <button class="filter-btn" data-filter="accessories">Accessories</button>
+
+            <h3>Price Filter</h3>
+
+            <button class="price-btn" data-price="all">All Price</button>
+            <button class="price-btn" data-price="500">Below Rs. 500</button>
+            <button class="price-btn" data-price="1000">Below Rs. 1000</button>
+            <button class="price-btn" data-price="1500">Below Rs. 1500</button>
+            <button class="price-btn" data-price="2000">Below Rs. 2000</button>
         </div>
 
         <div class="product-content">
@@ -435,24 +443,31 @@
             $("#footer").load("footer.html");
 
             function resetProducts() {
-                $("#men .card").hide();
-                $("#men .card").slice(0, 4).show();
-                $("#loadMoreMen").show();
+                $("#men .card").hide().slice(0, 4).show();
+                $("#women .card").hide().slice(0, 4).show();
+                $("#accessories .card").hide().slice(0, 4).show();
 
-                $("#women .card").hide();
-                $("#women .card").slice(0, 4).show();
-                $("#loadMoreWomen").show();
-
-                $("#accessories .card").hide();
-                $("#accessories .card").slice(0, 4).show();
-                $("#loadMoreAccessories").show();
+                $("#loadMoreMen, #loadMoreWomen, #loadMoreAccessories").show();
             }
 
             resetProducts();
 
+            // Category products clickable
+let productId = 10;
+
+$("#men .card, #women .card, #accessories .card").each(function () {
+    $(this).attr("data-id", productId);
+    $(this).css("cursor", "pointer");
+    productId++;
+});
+
+$(".card").click(function () {
+    let id = $(this).data("id");
+    window.location.href = "productdetail.html?id=" + id;
+});
+
             $("#loadMoreMen").click(function () {
                 $("#men .card:hidden").slice(0, 4).slideDown();
-
                 if ($("#men .card:hidden").length == 0) {
                     $(this).fadeOut();
                 }
@@ -460,7 +475,6 @@
 
             $("#loadMoreWomen").click(function () {
                 $("#women .card:hidden").slice(0, 4).slideDown();
-
                 if ($("#women .card:hidden").length == 0) {
                     $(this).fadeOut();
                 }
@@ -468,7 +482,6 @@
 
             $("#loadMoreAccessories").click(function () {
                 $("#accessories .card:hidden").slice(0, 4).slideDown();
-
                 if ($("#accessories .card:hidden").length == 0) {
                     $(this).fadeOut();
                 }
@@ -480,9 +493,10 @@
 
                 let filter = $(this).data("filter");
 
+                $(".price-btn").removeClass("active");
+
                 if (filter === "all") {
                     $("#men, #women, #accessories").show();
-                    $("#loadMoreMen, #loadMoreWomen, #loadMoreAccessories").show();
                     resetProducts();
                 }
 
@@ -493,8 +507,7 @@
                     $("#loadMoreMen").show();
                     $("#loadMoreWomen, #loadMoreAccessories").hide();
 
-                    $("#men .card").hide();
-                    $("#men .card").slice(0, 4).show();
+                    $("#men .card").hide().slice(0, 4).show();
                 }
 
                 if (filter === "women") {
@@ -504,8 +517,7 @@
                     $("#loadMoreWomen").show();
                     $("#loadMoreMen, #loadMoreAccessories").hide();
 
-                    $("#women .card").hide();
-                    $("#women .card").slice(0, 4).show();
+                    $("#women .card").hide().slice(0, 4).show();
                 }
 
                 if (filter === "accessories") {
@@ -515,10 +527,45 @@
                     $("#loadMoreAccessories").show();
                     $("#loadMoreMen, #loadMoreWomen").hide();
 
-                    $("#accessories .card").hide();
-                    $("#accessories .card").slice(0, 4).show();
+                    $("#accessories .card").hide().slice(0, 4).show();
                 }
             });
+
+            $(".price-btn").click(function () {
+                $(".price-btn").removeClass("active");
+                $(this).addClass("active");
+
+                $(".filter-btn").removeClass("active");
+
+                let priceLimit = $(this).data("price");
+
+                $("#men, #women, #accessories").show();
+                $(".card").hide();
+                $(".load-btn").hide();
+
+                if (priceLimit === "all") {
+                    $(".filter-btn[data-filter='all']").addClass("active");
+                    resetProducts();
+                    return;
+                }
+
+                $(".card").each(function () {
+                    let priceText = $(this).find(".sale-price").text();
+
+                    let price = priceText
+                        .replace("Rs.", "")
+                        .replace(",", "")
+                        .replace(".00", "")
+                        .trim();
+
+                    price = parseInt(price);
+
+                    if (price <= priceLimit) {
+                        $(this).show();
+                    }
+                });
+            });
+            
 
         });
     </script>

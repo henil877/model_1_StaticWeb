@@ -132,7 +132,7 @@
     function displayCart() {
 
       cartContainer.innerHTML = "";
-
+     
       let subtotal = 0;
 
       if (cart.length === 0) {
@@ -167,7 +167,7 @@
                     <p>Rs. ${product.price}</p>
 
                     <div class="qty-box">
-
+                            
                         <button onclick="changeQty(${index},-1)">-</button>
 
                         <span class="qty">${product.qty}</span>
@@ -192,7 +192,6 @@
 
         let grandTotal = subtotal + tax;
 
-        // SAVE PAYMENT DATA
         localStorage.setItem("subtotal", subtotal);
         localStorage.setItem("tax", tax);
         localStorage.setItem("grandTotal", grandTotal);
